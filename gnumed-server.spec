@@ -1,5 +1,5 @@
 Name:		gnumed-server
-Version:	16.5
+Version:	16.6
 Release:	1
 Summary:	The GNUmed back end server
 Group:		System/Servers
@@ -34,7 +34,7 @@ occupational therapists.
 
 #Patch GM_SERVER_DIR path
 #-GM_SERVER_DIR="/var/lib/gnumed/server/bootstrap"
-#+GM_SERVER_DIR="/usr/share/gnumed-server/server/bootstrap"
+#+GM_SERVER_DIR="/usr/share/gnumed-server/bootstrap"
 %patch0 -p1
 %patch1 -p1
 
@@ -60,28 +60,29 @@ done
 
 #copy config files to /etc
 mkdir -p %{buildroot}%{_sysconfdir}/%{name}
-for conf in `ls etc/gnumed/*.conf.example`; 
-    do mv $conf `echo $conf|sed 's/.example//'`; 
-done
-cp -p -r etc/gnumed/*.conf %{buildroot}%{_sysconfdir}/%{name}
+rename .conf.example .conf etc/gnumed/*.conf.example
+#for conf in etc/gnumed/*.conf.example 
+#    do mv $conf `echo $conf|sed 's/.example$//'`
+#done
+install -m 644 etc/gnumed/*.conf %{buildroot}%{_sysconfdir}/%{name}
 
 #create .xz files and copy them to mandir
-mkdir -p %{buildroot}%{_mandir}/man8/
-mkdir -p %{buildroot}%{_mandir}/man1/
+install -d %{buildroot}%{_mandir}/man8/
+install -d %{buildroot}%{_mandir}/man1/
 
 for man in `ls doc/*.*`; \
     do xz $man; \
 done
-cp -p doc/*.8.xz %{buildroot}%{_mandir}/man8
-cp -p doc/*.1.xz %{buildroot}%{_mandir}/man1
+install -m 644 doc/*.8.xz %{buildroot}%{_mandir}/man8
+install -m 644 doc/*.1.xz %{buildroot}%{_mandir}/man1
 
 
 #remove .sh extensions
 #copy all scripts to bin dir
-mkdir -p %{buildroot}%{_bindir}
+install -d -m 755 %{buildroot}%{_bindir}
 rename ".sh" "" gm-*.sh
 rename ".py" "" gm-*.py
-cp gm-* %{buildroot}%{_bindir}
+install -m 755 gm-* %{buildroot}%{_bindir}
 
 popd  
 
