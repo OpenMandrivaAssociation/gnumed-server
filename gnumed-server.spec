@@ -1,5 +1,5 @@
 Name:		gnumed-server
-Version:	16.13
+Version:	16.14
 Release:	1
 Summary:	The GNUmed back end server
 Group:		System/Servers
