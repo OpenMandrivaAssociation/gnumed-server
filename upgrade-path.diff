@@ -1,0 +1,13 @@
+--- gnumed-server.15.0/server/gm-upgrade_server	2011-03-24 15:29:21.000000000 +0100
++++ gnumed-server.15.0/server/gm-upgrade_server	2011-03-31 15:54:51.000000000 +0200
+@@ -13,8 +13,8 @@
+ #==============================================================
+ # those probably need some adjustment from package maintainers:
+ 
+-GM_LOG_BASE="/var/log/gnumed/server"
+-GM_SERVER_DIR="/var/lib/gnumed/server/bootstrap"
++GM_LOG_BASE="/var/log/gnumed-server"
++GM_SERVER_DIR="/usr/share/gnumed-server/bootstrap"
+ 
+ #==============================================================
+ 

@@ -1,0 +1,13 @@
+--- GNUmed-v10.rc4/server/gm-bootstrap_server	2009-02-05 14:05:19.000000000 +0100
++++ GNUmed-v10.rc4/server/gm-bootstrap_server	2009-02-17 20:57:54.000000000 +0100
+@@ -13,8 +13,8 @@
+ #==============================================================
+ # those probably need some adjustment from package maintainers:
+ 
+-GM_LOG_BASE="/var/log/gnumed/server"
+-GM_SERVER_DIR="/var/lib/gnumed/server/bootstrap"
++GM_LOG_BASE="/var/log/gnumed-server"
++GM_SERVER_DIR="/usr/share/gnumed-server/bootstrap"
+ 
+ #==============================================================
+ 
