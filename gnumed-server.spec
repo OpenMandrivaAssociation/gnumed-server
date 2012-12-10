@@ -93,3 +93,31 @@ popd
 %{_bindir}/gm-*
 %{_mandir}/man?/gm-*
 %config(noreplace) %{_sysconfdir}/%{name}/
+
+
+%changelog
+* Mon May 21 2012 Dmitry Mikhirev <dmikhirev@mandriva.org> 16.14-1
++ Revision: 799755
+- update to 16.4
+
+* Thu Apr 19 2012 Dmitry Mikhirev <dmikhirev@mandriva.org> 16.13-1
++ Revision: 792126
+- update to 16.3
+
+* Sat Feb 11 2012 Dmitry Mikhirev <dmikhirev@mandriva.org> 16.12-1
++ Revision: 772851
+- update to 16.12
+
+* Sat Dec 17 2011 Dmitry Mikhirev <dmikhirev@mandriva.org> 16.7-1
++ Revision: 743194
+- new tarball
+- update to 16.7
+
+* Fri Dec 02 2011 Dmitry Mikhirev <dmikhirev@mandriva.org> 16.6-1
++ Revision: 737151
+- Version 16.6
+
+* Thu Dec 01 2011 Dmitry Mikhirev <dmikhirev@mandriva.org> 16.5-1
++ Revision: 736010
+- imported package gnumed-server
+
