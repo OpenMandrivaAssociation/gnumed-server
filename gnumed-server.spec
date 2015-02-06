@@ -1,6 +1,6 @@
 Name:		gnumed-server
 Version:	16.14
-Release:	1
+Release:	2
 Summary:	The GNUmed back end server
 Group:		System/Servers
 License:	GPLv2+ or GPLv1
