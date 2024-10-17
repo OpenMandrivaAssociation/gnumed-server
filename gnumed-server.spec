@@ -4,7 +4,7 @@ Release:	2
 Summary:	The GNUmed back end server
 Group:		System/Servers
 License:	GPLv2+ or GPLv1
-URL:		http://wiki.gnumed.de/
+URL:		https://wiki.gnumed.de/
 Source0:	http://www.gnumed.de/downloads/server/v16/%{name}.%{version}.tgz
 Source1:	http://www.gnu.org/licenses/gpl-1.0.txt	
 Patch0:		gnumed-server-correct-dir.patch
